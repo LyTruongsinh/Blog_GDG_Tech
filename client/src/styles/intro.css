@@ -1,0 +1,653 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900);
+:root {
+  --primary-color: #f2726a;
+}
+
+
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5em;
+  border-radius: 20px 20px 0 0;
+  background-image: url('../../file-svg/tech-hero1.svg');
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  height: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  color: gray;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+/* Ẩn thanh gõ chữ trong input */
+.intro input, 
+.intro textarea, 
+.intro [contenteditable] {
+  caret-color: transparent; /* Ẩn thanh nhấp nháy */
+  outline: none; /* Ẩn viền khi focus */
+}
+
+/* Tiêu đề */
+.intro h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* Hiệu ứng fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon_gdcs {
+  background-image: url('../../file-svg/google-developers-svgrepo-com.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  width: 350px;
+  height: 250px;
+}
+
+
+.fade-in-effect {
+  opacity: 0;
+  transform: translateY(-30px); /* Đặt vị trí ban đầu ở phía trên */
+  animation: slideDown 3s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Vị trí ban đầu: di chuyển lên trên */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Cuối cùng: về vị trí ban đầu */
+  }
+}
+
+
+
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation:
+    typing 3s steps(27) forwards,
+    blink 0.7s infinite;
+  font-size: 2rem;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+
+
+
+
+.glowButton {
+  position: relative;
+  margin: 10px 800px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(160deg, #ff0000, var(--primary-color));
+  border-radius: 30px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 
+    0 0 0 0 var(--primary-color),
+    0.5rem 0.5rem 30px rgba(0, 0, 0, 0.5); /* mix(black, #26115a, 50%) chuyển thành rgba */
+  transition: box-shadow 0.6s;
+}
+
+.glowButton:hover {
+  box-shadow: 
+    0 0 60px 2px var(--primary-color),
+    0.5rem 0.5rem 30px rgba(0, 0, 0, 0.5);
+}
+
+.glowButton:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 30px;
+  background-image: linear-gradient(170deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-child {
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 10px;
+  height: auto;
+  border: 1px solid #f2726a;
+  padding: 20px;
+  display: flex;
+}
+.svg {
+  margin-top: 20px;
+  width: 50%;
+  height: auto; /* Tự động điều chỉnh chiều cao */
+  padding: 20px;
+}
+
+
+.content1 {
+  background: #ffffff; /* White background */
+  padding: 40px 30px; /* More padding for breathing space */
+  border-radius: 12px; /* Rounded corners */
+  max-width: 900px; /* Limiting width */
+  margin: 50px 0; /* Vertical margin without centering */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  color: #333; /* Dark gray text */
+  line-height: 1.6; /* Increased line height for readability */
+  text-align: left; /* Align text to the left */
+  animation: fadeIn 2s forwards; /* Fade in animation */
+  min-height: 100px;
+}
+
+.content1 p {
+  font-size: 1.1rem; /* Comfortable font size */
+  color: #555; /* Light gray for text */
+}
+
+.content1 p .highlight {
+  font-weight: bold;
+  color: #f2726a; /* Accent color for highlights */
+}
+
+.content1 ul {
+  margin-top: 20px;
+  padding-left: 30px;
+}
+
+.content1 ul li {
+  font-size: 1.1rem; /* List items with slightly larger font */
+  margin-bottom: 15px; /* Space between list items */
+  color: #444; /* Slightly darker text for readability */
+}
+
+.content1 ul li strong {
+  color: #00f2ff; /* Bright accent color for section titles */
+}
+
+.content1 p:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00f2ff; /* Bright color for the final sentence */
+}
+
+.content1 a {
+  color: #f2726a; /* Link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content1 a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .content1 {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .content1 p,
+  .content1 ul li {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+}
+
+.menu-choice {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #f2726a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height : auto;
+}
+
+.menu-choice-content {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 cột mỗi hàng */
+    grid-template-rows: repeat(2, auto); /* 2 hàng */
+    gap: 30px; /* Khoảng cách giữa các ô */
+    justify-content: center;
+    align-items: center;
+}
+.menu-choice-content-child {
+    height: 240px;
+    width: 240px;
+    background-color: white;
+    border-radius: 20px 20px 20px 0;
+    border : 2px solid #f2726a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;;
+}
+.menu-choice-content-child:hover {
+  transform: translateY(-5px); /* Dịch chuyển lên 5px */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+}
+.menu-choice-head {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+.name-choice {
+  color : black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none;
+}
+.demo-choice {
+  color:darkgrey;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.icon-choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  float: bottom;
+  position :absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  top: 150px;
+  gap: 7px;
+}
+.fluter {
+  background-image: url('../../file-svg/Flutter.svg');
+  width: 35px;
+  height: 35px;
+}
+.nodejs {
+  background-image: url('../../file-svg/Node.js.svg');
+  width: 35px;
+  height: 35px;
+}
+.reactjs {
+  background-image: url('../../file-svg/React.svg');
+  width: 35px;
+  height: 35px;
+}
+
+
+.vscode {
+  background-image: url('../../file-svg/Visual\ Studio\ Code\ \(VS\ Code\).svg');
+  width: 35px;
+  height: 35px;
+}
+.intellj {
+  background-image: url('../../file-svg/IntelliJ\ IDEA.svg');
+  width: 35px;
+  height: 35px;
+}
+.webstorm {
+  background-image: url('../../file-svg/WebStorm.svg');
+  width: 35px;
+  height: 35px;
+}
+.figma {
+  background-image: url('../../file-svg/Figma.svg');
+  width: 35px;
+  height: 35px;
+}
+.adopexd {
+  background-image: url('../../file-svg/Adobe\ XD.svg');
+  width: 35px;
+  height: 35px;
+}
+.elixir{
+  background-image: url('../../file-svg/Elixir.svg');
+  width: 35px;
+  height: 35px;
+}
+.java{
+  background-image: url('../../file-svg/Java.svg');
+  width: 35px;
+  height: 35px;
+}
+.eclipse {
+  background-image: url('../../file-svg/Eclipse\ IDE.svg');
+  width: 35px;
+  height: 35px;
+}
+.jest {
+  background-image: url('../../file-svg/Jest.svg');
+  width: 35px;
+  height: 35px;
+}
+.pytest {
+  background-image: url('../../file-svg/pytest.svg');
+  width: 35px;
+  height: 35px;
+}
+.selenium {
+  background-image: url('../../file-svg/Selenium.svg');
+  width: 35px;
+  height: 35px;
+}
+.trello {
+  background-image: url('../../file-svg/Trello.svg');
+  width: 35px;
+  height: 35px;
+}
+.slack {
+  background-image: url('../../file-svg/Slack.svg');
+  width: 35px;
+  height: 35px;
+}
+.prometheus {
+  background-image: url('../../file-svg/Prometheus.svg');
+  width: 35px;
+  height: 35px;
+}
+.github {
+  background-image: url('../../file-svg/GitHub.svg');
+  width: 35px;
+  height: 35px;
+}
+.docker {
+  background-image: url('../../file-svg/Docker.svg');
+  width: 35px;
+  height: 35px;
+}
+.Ansible {
+  background-image: url('../../file-svg/Ansible.svg');
+  width: 35px;
+  height: 35px;
+}
+.mysql {
+  background-image: url('../../file-svg/MySQL.svg');
+  width: 35px;
+  height: 35px;
+}
+.mongodb {
+  background-image: url('../../file-svg/MongoDB.svg');
+  width: 35px;
+  height: 35px;
+}
+.database {
+  background-image: url('../../file-svg/Azure\ SQL\ Database.svg');
+  width: 35px;
+  height: 35px;
+}
+
+.footer-intro {
+  border-radius: 20px;
+  margin-top: 40px;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(30deg, #00f2ff, #f2726a);
+  float: bottom;
+  display: flex;
+}
+.infor, .get-started, .resource{
+  padding-top: 70px;
+  width: 25%;
+  height: auto;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infor ul li, .get-started ul li, .resource ul li {
+  margin-bottom: 2px;
+  font-weight: 550;
+}
+.resource strong {
+  font-weight: 800;
+}
+.get-started strong {
+  font-weight: 800;
+}
+.infor strong {
+  font-weight: 800;
+}
+.newsletter {
+  padding-top: 70px;
+  width: 25%;
+}
+.newsletter strong {
+  font-weight: 800;
+}
+.newsletter p {
+  white-space: pre-line;
+}
+.newsletter form {
+  display: flex;
+  width: 100%;
+}
+.newsletter form input[type="text"] {
+  padding: 10px;
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+}
+.newsletter form button {
+  width: 20%;
+  height: 50px;
+  background-color: #f2726a;
+  margin-left: 10px;
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  font-size: small;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter form button:hover {
+  background-color: #00f2ff;
+}
+
+
+
+.wrapperq {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.wrapperq ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.wrapperq ul li {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 70px;
+  border-radius: 50%;
+  border: 5px solid #D8E2DC;
+  float: left;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px 
+to align it properly */
+.wrapperq ul li .fa {
+  color: #D8E2DC;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapperq ul li:hover.facebook {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+.wrapperq ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapperq ul li:hover.twitter {
+  border: 5px solid #00aced;
+  box-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+.wrapperq ul li:hover .fa-twitter {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapperq ul li:hover.instagram {
+  border: 5px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.wrapperq ul li:hover .fa-instagram {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+/* google */
+.wrapperq ul li:hover.google {
+  border: 5px solid #dd4b39;
+  box-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+
+.wrapperq ul li:hover .fa-google {
+  color: #dd4b39;
+  text-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+
+/* whatsapp */
+.wrapperq ul li:hover.whatsapp {
+  border: 5px solid #4dc247;
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.wrapperq ul li:hover .fa-whatsapp {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 640px){
+  .wrapperq {
+      width: 350px;
+  }
+  .wrapperq ul li{
+      margin-top: 10px;
+  }
+  .wrapperq ul li.google{
+      margin-left: 60px;
+  }
+}
+
+
+@media screen and (max-width: 340px){
+  .wrapperq {
+      width: 150px;
+  }
+  .wrapperq ul li{
+      margin:15px;
+  }
+  .wrapperq ul li.google{
+      margin-left: 15px;
+  }
+}
